@@ -31,13 +31,13 @@ def main():
     # 解析対象のFortranファイルパス
     # Windowsパスの指定には r"..." (raw文字列) を使うか、スラッシュを順方向にする
     #fortran_file_path = r"C:\00miyatake\99Python\_Python_fparser2\j2d_tnshoku_ver5.f90"
-    fortran_file_path = r"E:\21_DATA\02Python\01fortran_analyze\20250615\j2d_tnshoku_ver5.f90"
+    fortran_file_path = r"E:\21_DATA\02Python\01fortran_analyze\j2d_tnshoku_ver5.f90"
     # 出力ディレクトリ
     output_directory = "mermaid_charts"
     
     # 各種出力ファイルのパスを定義
     analysis_data_output_path = os.path.join(output_directory, "flow_data.json")
-    text_report_output_path = "flow_report.txt"  # カレントディレクトリに出力
+    text_report_output_path = os.path.join(output_directory, "flow_report.txt")
     
     # 出力ディレクトリが存在しない場合は作成
     if not os.path.exists(output_directory):

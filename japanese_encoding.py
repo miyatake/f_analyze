@@ -86,3 +86,6 @@ def main():
         print(f"読み込んだ行数: {len(lines)}")
     else:
         print("ファイルの読み込みに失敗しました")
+
+if __name__ == "__main__":
+    main()
