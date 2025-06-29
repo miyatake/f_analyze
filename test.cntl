@@ -1,0 +1,18 @@
+# 解析対象のFortranファイルパス
+#fortran_file: "V:/10_係/03_システム係/ソフト係/19990929_プログラム共有化_MO/No1_斉藤・西村班/PROGRAM/kiyokawa/準線形/program/jyunspp2.for"
+fortran_file: "E:\15_programming\fortran_analyzer\20250628_cursor\j2d_tnshoku_ver5.f90"
+#fortran_file: "j2d_tnshoku_ver5.f90"
+
+# mermaidフロー図の出力ディレクトリ名
+output_dir: "mermaid_charts"
+
+# 各種出力ファイルのパス
+# mermaidファイル生成の中間ファイル
+#flow_data_file: ".\mermaid_charts\flow_data.json"
+flow_data_file: "flow_data.json"
+
+# 上記ファイルから人間が見て解析対象のFortranの構造が多少なりとも分かりやすくしたファイル
+flow_report_file: "flow_report.txt"
+
+# ログを出力するログファイル名
+log_filename: "fortran_analyzer.log"
