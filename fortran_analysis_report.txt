@@ -1,0 +1,52 @@
+=== PROGRAM: MAIN_PROGRAM (Lines: 1-16) ===
+L1: INTEGER :: I, J (Declaration: INTEGER) (ID: 5)
+L2: REAL X (Declaration: REAL) (ID: 6)
+L3: 10   FORMAT (I5) (Statement) (ID: 7)
+L4: DO 100 I = 1, 10 (Loop: Start) (ID: 8)
+    L5: DO 100 j = 1, 10 (Loop: Start) (ID: 9)
+        L6: IF (I .EQ. 5) THEN (If: Start) (ID: 10)
+        L8: ELSE IF (I .EQ. 7) THEN (Else If) (ID: 11)
+            L9: WRITE(*,10) 'I is 7' (IO: WRITE) (ID: 12)
+        L10: ELSE (Else) (ID: 13)
+            L11: X = REAL(I) * 2.0 (Assignment) (ID: 14)
+        L12: END IF (ID: 15)
+        L13: J = I + 1 (Assignment) (ID: 16)
+        L14: 100  CONTINUE (Continue Statement) (ID: 17)
+        L15: STOP (Program: Stop) (ID: 18)
+        L16: END (Statement) (ID: 19)
+
+=== SUBROUTINE: SUB1 (Lines: 17-23) ===
+Arguments: A, B
+L17: SUBROUTINE SUB1(A, B) (ID: 20)
+L17: SUBROUTINE SUB1(A, B) (Statement) (ID: 21)
+L18: INTEGER A, B (Declaration: INTEGER) (ID: 22)
+L19: IF (A .GT. 0) GOTO 20 (Logical If: Condition 'A .GT. 0' Statement: 'GOTO 20') (ID: 23)
+L20: PRINT *, 'A is not positive' (Statement) (ID: 24)
+L21: 100   CONTINUE (Continue Statement) (ID: 25)
+L22: RETURN (Subroutine/Function: Return) (ID: 26)
+L23: END SUBROUTINE SUB1 (End SUBROUTINE) (ID: 27)
+
+=== FUNCTION: MYFUNC (Lines: 24-32) ===
+Arguments: K
+L24: FUNCTION MYFUNC(K) (ID: 28)
+L24: FUNCTION MYFUNC(K) (Statement) (ID: 29)
+L25: INTEGER K, MYFUNC (Declaration: INTEGER) (ID: 30)
+L26: IF (K .LT. 0) THEN (If: Start) (ID: 31)
+    L27: MYFUNC = 0 (Assignment) (ID: 32)
+L28: ELSE (Else) (ID: 33)
+    L29: MYFUNC = K * 10 (Assignment) (ID: 34)
+L30: END IF (ID: 35)
+L31: RETURN (Subroutine/Function: Return) (ID: 36)
+L32: END FUNCTION MYFUNC (End FUNCTION) (ID: 37)
+
+=== SUBROUTINE: ANOTHER_SUB (Lines: 33-40) ===
+L33: SUBROUTINE ANOTHER_SUB (ID: 38)
+L33: SUBROUTINE ANOTHER_SUB (Statement) (ID: 39)
+L34: REAL Y (Declaration: REAL) (ID: 40)
+L35: Y = 1.0 (Assignment) (ID: 41)
+L36: DO WHILE (Y .LT. 10.0) (Loop While: Start) (ID: 42)
+    L37: Y = Y + 1.0 (Assignment) (ID: 43)
+L38: END DO (ID: 44)
+L39: RETURN (Subroutine/Function: Return) (ID: 45)
+L40: END (End SUBROUTINE) (ID: 46)
+
